@@ -1,6 +1,11 @@
 <main id="invoice-page">
     <section>
       <h1><%= title %></h1>
-      <h2>Under Contruction And Coming Soon!</h2>
+      <form id="searchForm" action="/profiles/search" method="GET">
+        <input class="searchbar" type="text" name="q" placeholder="Search by name">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+      <a id="create-invoice" href="/profiles/create"><button id="newInvoice" class="btn btn-success">New Invoice</button></a>
+
     </section>
 </main>
