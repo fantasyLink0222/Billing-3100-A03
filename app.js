@@ -21,6 +21,7 @@ const mongoose = require("mongoose");
 const indexRouter = require("./routers/indexRouter");
 const productsRouter = require("./routers/productsRouter");
 const profilesRouter = require("./routers/profilesRouter");
+const invoiceRouter = require("./routers/invoiceRouter");
 
 // set up default mongoose connection
 mongoose.connect(uri);
@@ -68,6 +69,7 @@ app.get("/products/search", productController.searchProducts);
 app.use("/", indexRouter);
 app.use("/products", productsRouter);
 app.use("/profiles", profilesRouter);
+app.use("/invoices", invoiceRouter);
 
 //catch any unmatched routes
 app.all("/*", (req, res) => {
